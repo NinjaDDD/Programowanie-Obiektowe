@@ -1,0 +1,364 @@
+// Console.WriteLine("Zadanie 3.1");
+// int year = int.Parse(Console.ReadLine());
+// if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+// {
+//     Console.WriteLine("Rok "+ year + " jest przystępny");
+// }
+// else
+//     Console.WriteLine("Rok "+ year+ " nie jest przystępny");
+
+// Console.WriteLine("Zadanie 3.2");
+// int a, b;
+// Console.WriteLine("Podaj 2 liczby całkowite");
+// a = int.Parse(Console.ReadLine());
+// b = int.Parse(Console.ReadLine());
+// if (b % a == 0)
+//     Console.WriteLine("Liczba "+ a + " jest dzielnikiem liczby "+ b);
+// else
+//     Console.WriteLine("Liczba "+ a + " nie jest dzielnikiem liczby "+ b);    
+
+// Console.WriteLine("Zadanie 3.3");
+// Console.WriteLine("Podaj 3 liczby całkowite");
+// int a, b, c;
+// a = int.Parse(Console.ReadLine());
+// b = int.Parse(Console.ReadLine());
+// c = int.Parse(Console.ReadLine());
+// if (a >= b && a >= c)
+//     Console.WriteLine("Najwieksza liczba to "+ a);
+// if (b >= a && b >= c)
+//     Console.WriteLine("Najwieksza liczba to "+ b);
+// if (c >= a && c >= b)
+//     Console.WriteLine("Najwieksza liczba to "+ c);
+
+// Console.WriteLine("Zadanie 3.4");
+// Console.WriteLine("Podaj 2 liczby: "); 
+// double a, b;
+// a = double.Parse(Console.ReadLine());
+// b = double.Parse(Console.ReadLine());
+// Console.WriteLine("Podaj operator + | - | * | : ");
+// char c = char.Parse(Console.ReadLine());
+// if(c == '+')
+//     Console.WriteLine("Wynik to: "+ (a+b));
+// else if(c == '-')
+//     Console.WriteLine("Wynik to: "+ (a-b)); 
+// else if(c == '*')
+//     Console.WriteLine("Wynik to: "+ (a*b));
+// else if(c == ':')
+//     Console.WriteLine("Wynik to: "+ (a/b));
+// else
+//     Console.WriteLine("Nieprawidłowy znak");   
+
+// Console.WriteLine("Zadanie 3.5");
+// int a, b, c, d, x1, x2;
+// Console.WriteLine("Podaj a, b, c do równnania kwadratowego b^2 - 4ac");
+// a = int.Parse(Console.ReadLine());
+// b = int.Parse(Console.ReadLine());
+// c = int.Parse(Console.ReadLine());
+// if (a == 0)
+// {
+//     Console.WriteLine("a nie może być równe 0");
+//     Console.ReadKey();
+// }
+// d = b*b - 4*a*c;
+// if (d < 0)
+// {
+//     Console.WriteLine("Brak miejsc zerowych delta ujemna " + d);
+// }
+// else if (d == 0)
+// {
+//     x1 = -b / 2 * a;
+//     Console.WriteLine("Posiada 1 pierwiastek, delta = "+ d + " a pierwiastek x = "+ x1);
+// }
+// else
+// {
+//     x1 = (-b - d) / (2 * a);
+//     x2 = (-b + d) / (2 * a);
+//     Console.WriteLine("Posiada 2 pierwstki, delta = "+ d + "a pierwiastki to kolejno x1 = "+ x1 +" ,x2 = "+ x2);
+// }
+
+// Console.WriteLine("Zadanie 3.6");
+// Console.WriteLine("Podaj swoją wysokość w metrach i wagę w kg");
+// double h = double.Parse(Console.ReadLine());
+// int w = int.Parse(Console.ReadLine());
+// double bmi = w / (h*h);
+// Console.WriteLine("Twoje BMI wynosi: "+ bmi);
+// if(bmi < 16)
+//     Console.WriteLine("Wygłodzenie");
+// else if (bmi >= 16 && bmi < 17)
+//     Console.WriteLine("Wychudzenie");
+// else if (bmi >= 17 && bmi < 18.5)
+//     Console.WriteLine("Niedowaga");
+// else if (bmi >= 18.5 && bmi < 25)
+//     Console.WriteLine("Wartość prawidłowa");
+// else
+//     Console.WriteLine("Nadwaga");
+
+// Console.WriteLine("Zadanie 3.7");
+// Console.WriteLine("Wpisz nr dnia tygodnia");
+// string number = Console.ReadLine();
+// switch (number)
+// {
+//     case "1":
+//         Console.WriteLine("Poniedziałek");
+//         break;
+//     case "2":
+//         Console.WriteLine("Wtorek");
+//         break;
+//     case "3":
+//         Console.WriteLine("Środa");
+//         break;
+//     case "4":
+//         Console.WriteLine("Czwartek");
+//         break;
+//     case "5":
+//         Console.WriteLine("Piątek");
+//         break;
+//     case "6":
+//         Console.WriteLine("Sobota");
+//         break;
+//     case "7":
+//         Console.WriteLine("Niedziela");
+//         break;
+//     default:
+//         Console.WriteLine("Nie ma takiego dnia tygodnia");
+//         break;
+// }
+// Console.ReadKey();
+
+// Console.WriteLine("Zadanie 3.8");
+// Console.WriteLine("Podaj wartość średniej ocen: ");
+// double avg = double.Parse(Console.ReadLine());
+// if (avg >= 2 && avg < 4)
+//     Console.WriteLine("Przysługuje ci 0.00 zł");
+// else if(avg >= 4 && avg < 4.8)
+//     Console.WriteLine("Przysługuje ci 350.00 zł");
+// else if(avg >= 4.8 && avg <= 5)
+//     Console.WriteLine("Przysługuje ci 550.00 zł");
+// else
+//     Console.WriteLine("Niepoprawna średnia");
+
+// Console.WriteLine("Zadanie 3.9");
+// Console.WriteLine("Wybierz figure a, b, c, d");
+// char col = char.Parse(Console.ReadLine());
+// Console.WriteLine("Teraz podaj liczbe wierszy (1-4)");
+// int row = int.Parse(Console.ReadLine());
+// switch (col)
+// {
+//     case 'a':
+//         switch (row)
+//         {
+//             case 1:
+//                 Console.WriteLine("*");
+//                 break;
+//             case 2:
+//                 Console.WriteLine("*");
+//                 Console.WriteLine("**");
+//                 break;
+//             case 3:
+//                 Console.WriteLine("*");
+//                 Console.WriteLine("**");
+//                 Console.WriteLine("***");
+//                 break;
+//             case 4:
+//                 Console.WriteLine("*");
+//                 Console.WriteLine("**");
+//                 Console.WriteLine("***");
+//                 Console.WriteLine("****");
+//                 break;
+//             default:
+//                 Console.WriteLine("Niepoprawna ilość wierszy");
+//                 break;
+//         }
+//         break;
+//     case 'b':
+//         switch (row)
+//         {
+//             case 1:
+//                 Console.WriteLine("****");
+//                 break;
+//             case 2:
+//                 Console.WriteLine("****");
+//                 Console.WriteLine("***");
+//                 break;
+//             case 3:
+//                 Console.WriteLine("****");
+//                 Console.WriteLine("***");
+//                 Console.WriteLine("**");
+//                 break;
+//             case 4:
+//                 Console.WriteLine("****");
+//                 Console.WriteLine("***");
+//                 Console.WriteLine("**");
+//                 Console.WriteLine("*");
+//                 break;
+//             default:
+//                 Console.WriteLine("Niepoprawna ilość wierszy");
+//                 break;
+//         }
+//         break;
+//     case 'c':
+//         switch (row)
+//         {
+//             case 1:
+//                 Console.WriteLine("   *");
+//                 break;
+//             case 2:
+//                 Console.WriteLine("   *");
+//                 Console.WriteLine("  **");
+//                 break;
+//             case 3:
+//                 Console.WriteLine("   *");
+//                 Console.WriteLine("  **");
+//                 Console.WriteLine(" ***");
+//                 break;
+//             case 4:
+//                 Console.WriteLine("   *");
+//                 Console.WriteLine("  **");
+//                 Console.WriteLine(" ***");
+//                 Console.WriteLine("****");
+//                 break;
+//             default:
+//                 Console.WriteLine("Niepoprawna ilość wierszy");
+//                 break;
+//         }
+//         break;
+//     case 'd':
+//         switch (row)
+//         {
+//             case 1:
+//                 Console.WriteLine("****");
+//                 break;
+//             case 2:
+//                 Console.WriteLine("****");
+//                 Console.WriteLine("*  *");
+//                 break;
+//             case 3:
+//                 Console.WriteLine("****");
+//                 Console.WriteLine("*  *");
+//                 Console.WriteLine("*  *");
+//                 break;
+//             case 4:
+//                 Console.WriteLine("****");
+//                 Console.WriteLine("*  *");
+//                 Console.WriteLine("*  *");
+//                 Console.WriteLine("****");
+//                 break;
+//             default:
+//                 Console.WriteLine("Niepoprawna ilość wierszy");
+//                 break;
+//         }
+//         break;
+//     default:
+//         Console.WriteLine("Nie ma takiej figury");
+//         break;
+// }
+
+// Console.WriteLine("Zadania 3.10");
+// Console.WriteLine("Podaj liczbe");
+// int num = int.Parse(Console.ReadLine());
+// int fac = 1;
+// for (int i = 1; i <= num; i++)
+//     fac *= i;
+// Console.WriteLine($"Silnia twojej liczby to: {fac}");
+
+// Console.WriteLine("Zadanie 3.11");
+// int a = 1;
+// int sum = 0;
+// for (int i = 1; a <= 100; i++)
+// {
+//     sum++;
+//     a += i;
+// }
+// Console.WriteLine($"Kolejno dodanych liczb całkowitych do 1 tak aby przekroczyło liczbę 100 potrzebujemy {sum}");
+
+// Console.WriteLine("Zadanie 3.12");
+// int a = 1;
+// int sum = 0;
+// Console.WriteLine("Wprowadzaj kolejno liczby po wprowadzeniu 0 program pokaże ci sume wprowadzonych liczb");
+// do
+// {
+//     a = int.Parse(Console.ReadLine());
+//     sum += a;
+// } while (a != 0);
+// Console.WriteLine(sum);
+
+// Console.WriteLine("Zadanie 3.13");
+// Console.WriteLine("Podaj długość ciągu n");
+// int n = int.Parse(Console.ReadLine());
+// int sum = 0;
+// for (int i = 1; i <= n; i++)
+// {
+//     if (i % 2 != 0)
+//         sum += i;
+//     else
+//         sum -= i;
+// }
+// Console.WriteLine($"Suma twojego ciągu to {sum}");
+
+// Console.WriteLine("Zadanie 3.14");
+// Console.WriteLine("Podaj przedział <1, n>");
+// int n = int.Parse(Console.ReadLine());
+// int sum = 0;
+// int sum2 = 0;
+// int a = 0;
+// for (int i = 1; i <= n; i++)
+// {
+//     sum = i;
+//     for (int j = 1; j < i; j++)
+//     {
+//         if (sum % j == 0)
+//         {
+//             sum2 += j;
+//         }
+//     }
+//
+//     if (sum == sum2)
+//     {
+//         a++;
+//         Console.WriteLine($"Twoja {a} liczba doskonała to {sum2}");
+//     }
+//     sum2 = 0;
+// }
+
+// Console.WriteLine("Zadanie 3.15");
+// Console.WriteLine("Mamy monety 1 zł, 2 zł, 5 zł na ile sposobów możemy rozmienić 10 zł");
+// int one = 0;
+// int sum = 0;
+// int sum2 = 0;
+//
+// for (int i = 0; i <= 2; i++)
+// {
+//     sum = 0;
+//     sum = sum + i * 5;
+//     for (int j = 0; j <= 5; j++)
+//     {
+//         sum = sum + j * 2;
+//         while (sum <= 9)
+//         {
+//             one++;
+//             sum++;
+//         }
+//         if (sum == 10)
+//         {
+//             Console.WriteLine($"Kombinacja z {i} (5 zł), {j} (2 zł), {one} (1 zł)");
+//             one = 0;
+//         }
+//         if (sum <= 10 && i == 0)
+//         {
+//             sum2 += 1;
+//             sum = 0;
+//         }
+//         if (sum <= 10 && i == 1)
+//         {
+//             sum2 += 1;
+//             sum = 5;
+//         }
+//         if (sum <= 10 && i == 2)
+//         {
+//             sum2 += 1;
+//             sum = 10;
+//         }
+//     }
+// }
+//
+// Console.WriteLine($"Suma kombinacji: {sum2}");
